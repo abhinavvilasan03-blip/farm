@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #343a32; background: #e8e2d4; font-family: Arial, sans-serif; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+.top { position: sticky; top: 0; z-index: 5; background: #f7f2e5ee; border-bottom: 1px solid #ded5c0; backdrop-filter: blur(8px); }
+.nav { max-width: 1000px; min-height: 60px; margin: auto; padding: 10px 22px; display: flex; justify-content: space-between; align-items: center; }
+.logo { color: #334532; font-size: 15px; font-weight: bold; }
+.logo span { color: #c2634b; }
+.nav div { display: flex; gap: 20px; color: #66715e; font-size: 12px; }
+.nav a:hover { color: #b85f48; }
+.paper { position: relative; max-width: 1000px; margin: 30px auto; overflow: hidden; background-color: #fbf7eb; background-image: radial-gradient(#d9d1bd 0.7px, transparent 0.7px); background-size: 14px 14px; box-shadow: 0 10px 35px #65583b22; }
+.intro { position: relative; min-height: 440px; padding: 60px 8%; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.intro-copy { max-width: 460px; }
+.hand-label { margin: 0 0 8px; color: #aa6149; font-family: 'Comic Sans MS', cursive; font-size: 15px; font-style: italic; }
+h1, h2, h3, p { margin-top: 0; }
+.intro h1 { margin-bottom: 13px; color: #344433; font-family: Georgia, serif; font-size: clamp(45px,7vw,72px); line-height: 1.03; }
+.intro h1 span { color: #bc654d; font-style: italic; }
+.intro-text { max-width: 380px; color: #687263; font-size: 14px; }
+.doodle-button { display: inline-block; margin-top: 14px; padding: 9px 15px; border: 1px solid #718069; border-radius: 20px; color: #465744; font-size: 12px; transform: rotate(-2deg); }
+.doodle-button:hover { background: #e9eddf; }
+.polaroid { width: 230px; margin: 0; padding: 10px 10px 7px; background: white; box-shadow: 0 6px 16px #514a362b; }
+.polaroid img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
+.polaroid figcaption { padding-top: 8px; color: #5d6358; font-family: 'Comic Sans MS', cursive; font-size: 11px; text-align: center; }
+.main-photo { margin-right: 15px; transform: rotate(3deg); }
+.main-photo img { object-position: center 35%; }
+.star { position: absolute; color: #d69d4f; }
+.star-one { top: 65px; right: 40%; font-size: 38px; transform: rotate(-10deg); }
+.star-two { right: 8%; bottom: 60px; color: #718d78; font-size: 28px; }
+.page-section { padding: 42px 8%; }
+.section-title { margin-bottom: 22px; display: flex; align-items: center; gap: 15px; }
+.section-title h2, .travel-card h2, .contact h2 { margin: 0; color: #344433; font-family: Georgia, serif; font-size: clamp(27px,4vw,39px); line-height: 1.15; }
+.section-title .hand-label { margin-bottom: 3px; }
+.number-tag { width: 36px; height: 36px; display: grid; place-items: center; transform: rotate(-8deg); background: #e9ba80; color: #684e31; font-size: 12px; font-weight: bold; }
+.number-tag.blue { background: #bdd3d4; color: #3b6264; transform: rotate(5deg); }
+.number-tag.pink { background: #e8b9ac; color: #7d493d; }
+.number-tag.green { background: #c4d09c; color: #4b5e3a; transform: rotate(4deg); }
+.about { position: relative; background: #f1ead9; }
+.about-note { position: relative; max-width: 700px; margin-left: auto; padding: 23px 28px; transform: rotate(-.6deg); background: #fffdf5; box-shadow: 0 3px 10px #64573a18; color: #5e6858; font-size: 13px; }
+.about-note p:last-of-type { margin-bottom: 0; }
+.tape { position: absolute; top: -9px; left: 46%; width: 70px; height: 19px; transform: rotate(-3deg); background: #ddb981aa; }
+.study-section { background: #f9f4e7; }
+.study-card { max-width: 620px; margin-left: auto; padding: 19px 22px; display: flex; align-items: center; gap: 16px; transform: rotate(.5deg); background: #dce8df; }
+.book-icon { font-size: 27px; }
+.study-card h3 { margin: 0; color: #3a5140; font-size: 17px; }
+.study-card p { margin: 2px 0; color: #657467; font-size: 13px; }
+.study-card small { color: #788379; font-size: 11px; }
+.scribble { margin-left: auto; color: #ad604c; font-family: 'Comic Sans MS', cursive; font-size: 12px; transform: rotate(-5deg); }
+.memory-grid { display: grid; grid-template-columns: 1fr 1.1fr 1fr; align-items: center; gap: 22px; }
+.tilt-left { transform: rotate(-4deg); }
+.tilt-right { transform: rotate(3deg); }
+.memory-grid .polaroid { width: 100%; }
+.memory-grid .polaroid img { height: auto; aspect-ratio: 4 / 5; }
+.memory-grid .polaroid img[src*="modelling-"] { aspect-ratio: 3 / 4; object-fit: contain; }
+.memory-grid .polaroid img[src*="cat-"] { aspect-ratio: 3 / 4; object-fit: cover; object-position: center 38%; }
+.memory-note { position: relative; padding: 20px; transform: rotate(1.5deg); background: #f5dfb4; color: #5a5749; }
+.memory-note h3 { margin: 11px 0 6px; color: #71513e; font-family: Georgia, serif; font-size: 21px; }
+.memory-note p { margin: 0; font-size: 12px; }
+.sticker { display: inline-block; padding: 4px 8px; transform: rotate(-6deg); border-radius: 3px; background: #be654c; color: white; font-size: 10px; font-weight: bold; }
+.drawn-heart { position: absolute; right: 14px; bottom: 3px; color: #ba6252; font-size: 32px; }
+.wins-section { background: #edf0df; }
+.wins-grid { max-width: 650px; margin-left: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.wins-grid article { min-height: 142px; padding: 17px; border: 1px solid #d7ddc5; background: #fffdf4; }
+.wins-grid article:nth-child(2) { transform: rotate(1.2deg); }
+.wins-grid article > span { font-size: 22px; }
+.wins-grid h3 { margin: 6px 0; color: #516447; font-family: Georgia, serif; font-size: 18px; }
+.wins-grid p { margin: 0; color: #687263; font-size: 11px; }
+.tiny-note { margin: 15px 0 0; color: #82906f; font-family: 'Comic Sans MS', cursive; font-size: 12px; text-align: right; }
+.travel-section { padding-top: 35px; padding-bottom: 48px; }
+.travel-layout { max-width: 720px; margin: auto; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 25px; }
+.travel-card { position: relative; padding: 27px; transform: rotate(-.5deg); border: 1px dashed #c4b98f; background: #e7eee5; }
+.travel-photo { width: 100%; transform: rotate(3deg); }
+.travel-photo img { height: auto; aspect-ratio: 4 / 5; }
+.travel-card h2 { max-width: 440px; margin-bottom: 12px; }
+.travel-card>p:not(.hand-label) { max-width: 470px; margin-bottom: 18px; color: #697466; font-size: 13px; }
+.postmark { position: absolute; top: 20px; right: 18px; width: 58px; height: 58px; display: grid; place-items: center; transform: rotate(9deg); border: 1px solid #a66d59; border-radius: 50%; color: #a66d59; font-size: 9px; text-align: center; }
+.route { display: flex; align-items: center; gap: 8px; color: #70856e; font-size: 11px; }
+.route span { overflow: hidden; color: #b78460; letter-spacing: 2px; }
+.contact { padding: 43px 8%; background: #f1e3d2; text-align: center; }
+.contact h2 { margin-bottom: 8px; }
+.contact>p:not(.hand-label) { margin-bottom: 16px; color: #697063; font-size: 13px; }
+.contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.contact-links a { padding: 9px 13px; border: 1px solid #c1ad8f; border-radius: 18px; background: #fffaf0; color: #59614f; font-size: 11px; }
+.contact-links a:hover { background: #e8efdf; }
+.style-switch { padding: 16px; background: #f9f4e7; text-align: center; }
+.style-switch a { color: #687b5c; font-size: 12px; text-decoration: underline; }
+footer { padding: 17px; color: #747565; font-family: 'Comic Sans MS', cursive; font-size: 11px; text-align: center; }
+@media (max-width: 700px) {
+    .paper { margin: 12px; }
+    .nav { align-items: flex-start; flex-direction: column; gap: 7px; }
+    .nav div { flex-wrap: wrap; gap: 13px; }
+    .intro { padding: 42px 8%; flex-direction: column; align-items: flex-start; }
+    .main-photo { align-self: center; margin: 10px 0 0; }
+    .star-one { top: 38px; right: 12%; }
+    .memory-grid { grid-template-columns: 1fr 1fr; }
+    .memory-note { grid-column: 1 / -1; grid-row: 1; }
+    .memory-grid .polaroid img { height: auto; }
+    .scribble { display: none; }
+    .travel-layout { grid-template-columns: 1fr; gap: 19px; }
+    .travel-photo { width: min(100%,320px); justify-self: center; }
+}
+@media (max-width: 430px) {
+    .page-section { padding: 32px 7%; }
+    .wins-grid { grid-template-columns: 1fr; }
+    .memory-grid { gap: 12px; }
+    .memory-grid .polaroid { padding: 7px; }
+    .memory-grid .polaroid img { height: auto; }
+    .memory-grid .polaroid figcaption { font-size: 9px; }
+    .about-note { padding: 19px; }
+    .route { font-size: 9px; }
+}
