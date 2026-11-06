@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8f0">
+    <meta name="description" content="Practical smart farming ideas for healthier crops, better soil care, and wiser use of water.">
+    <title>Green Field | Smart Farming</title>
+    <link rel="stylesheet" href="farm.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="#home" aria-label="Green Field home">Green Field<span>.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#crops">Crops</a>
+                <a href="#methods">Methods</a>
+                <a href="#tools">Tools</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#field-notes">Field notes</a>
+                <a href="#videos">Learn</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="small-title"><span class="status-dot"></span> A smarter way to grow</p>
+                <h1>Healthy fields.<br><span>Better harvests.</span></h1>
+                <p class="intro">Crop information, modern farming methods, and simple tools to help you make informed decisions in the field.</p>
+                <div class="hero-actions"><a class="button" href="#crops">Find crop information <span aria-hidden="true">↘</span></a><a class="text-link" href="#tools">Open farm tools</a></div>
+                <div class="hero-note"><span aria-hidden="true">✳</span> A digital field guide for curious growers</div>
+            </div>
+            <figure class="hero-visual">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=85" alt="Green fields and crops under a wide sky" fetchpriority="high">
+                <figcaption class="image-caption"><span class="caption-mark" aria-hidden="true">✳</span><span><strong>Grow with the land</strong><small>Better decisions, season after season</small></span></figcaption>
+            </figure>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="about-inner">
+                <div class="about-heading"><p class="small-title">A thoughtful approach</p><h2>Good farming starts with paying attention.</h2></div>
+                <div class="about-copy"><p>Smart farming brings useful observations together to make everyday choices easier. A local forecast, a quick soil check, or a note about crop growth can help you decide what your field needs.</p><p>Start small, learn what works on your land, and build better habits one season at a time.</p><a class="text-link" href="#field-guide">Explore the field guide <span aria-hidden="true">→</span></a></div>
+            </div>
+        </section>
+
+        <section class="features section" id="features">
+            <p class="small-title">The essentials</p>
+            <h2>Three ways to make each decision count.</h2>
+            <p class="section-intro">Simple checks can make it easier to care for crops and use resources thoughtfully.</p>
+            <div class="card-row">
+                <article class="card"><span class="card-number">01</span>
+                    <div class="icon" aria-hidden="true">☀</div>
+                    <h3>Check the weather</h3>
+                    <p>Use your local forecast to plan watering, field work, and protection from changing conditions.</p>
+                    <a href="#field-guide" class="card-link">Plan around the forecast <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="card"><span class="card-number">02</span>
+                    <div class="icon" aria-hidden="true">⌁</div>
+                    <h3>Care for the soil</h3>
+                    <p>Check soil moisture and condition to understand what roots need before you irrigate.</p>
+                    <a href="#field-guide" class="card-link">Get to know your soil <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="card"><span class="card-number">03</span>
+                    <div class="icon" aria-hidden="true">✿</div>
+                    <h3>Watch crop growth</h3>
+                    <p>Walk your field regularly and notice changes in leaves, growth, and surrounding conditions.</p>
+                    <a href="#field-guide" class="card-link">Build a field routine <span aria-hidden="true">↗</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="crops section" id="crops">
+            <div class="crops-heading"><div><p class="small-title">Crop information finder</p><h2>Start with the crop you grow.</h2></div><p>Browse these short crop overviews. Search by crop name or growing group.</p></div>
+            <div class="crop-controls"><label class="crop-search-label" for="cropSearch">Search crops</label><input id="cropSearch" type="search" placeholder="Try rice, tomato, grain…" autocomplete="off"><div class="crop-filters" role="group" aria-label="Filter crops"><button class="filter-button active" type="button" data-crop-filter="all" aria-pressed="true">All crops</button><button class="filter-button" type="button" data-crop-filter="field" aria-pressed="false">Field crops</button><button class="filter-button" type="button" data-crop-filter="horticulture" aria-pressed="false">Horticulture</button></div></div>
+            <div class="crop-grid" id="cropGrid">
+                <article class="crop-card" data-crop-category="field" data-crop-search="rice paddy cereal field crop"><span class="crop-category">FIELD CROP</span><h3>Rice</h3><p>A cereal crop grown in diverse systems, from rain-fed fields to irrigated paddies.</p><dl><div><dt>Consider</dt><dd>Water availability and local planting season</dd></div><div><dt>Check</dt><dd>Soil drainage and field water management</dd></div></dl></article>
+                <article class="crop-card" data-crop-category="field" data-crop-search="wheat cereal grain field crop"><span class="crop-category">FIELD CROP</span><h3>Wheat</h3><p>A widely grown grain crop whose variety and planting window depend on local climate.</p><dl><div><dt>Consider</dt><dd>Local variety and seasonal temperature</dd></div><div><dt>Check</dt><dd>Soil condition and crop-stage needs</dd></div></dl></article>
+                <article class="crop-card" data-crop-category="horticulture" data-crop-search="tomato vegetable horticulture crop"><span class="crop-category">HORTICULTURE</span><h3>Tomato</h3><p>A popular vegetable crop grown in open fields and protected cultivation.</p><dl><div><dt>Consider</dt><dd>Sunlight, support, and steady moisture</dd></div><div><dt>Check</dt><dd>Leaves, fruit, and signs of pests or disease</dd></div></dl></article>
+                <article class="crop-card" data-crop-category="horticulture" data-crop-search="coconut plantation perennial horticulture crop"><span class="crop-category">HORTICULTURE</span><h3>Coconut</h3><p>A perennial plantation crop with management practices shaped by soil and rainfall.</p><dl><div><dt>Consider</dt><dd>Rainfall pattern and soil moisture</dd></div><div><dt>Check</dt><dd>Leaf condition and the area around each palm</dd></div></dl></article>
+            </div>
+            <p class="crop-empty" id="cropEmpty" hidden>No crops match that search. Try another name or category.</p>
+            <div class="crop-finder"><div><p class="small-title">Quick crop finder</p><h3>Choose a crop for a short overview.</h3></div><label for="cropSelect">Crop</label><select id="cropSelect"><option value="">Select a crop</option><option value="rice">Rice</option><option value="wheat">Wheat</option><option value="tomato">Tomato</option><option value="coconut">Coconut</option></select><p id="cropInfo" class="crop-info" aria-live="polite">Choose a crop to see its overview.</p></div>
+            <p class="crop-disclaimer">These are general learning notes, not crop-specific recommendations. Follow local agricultural guidance for your area.</p>
+        </section>
+
+        <section class="methods section" id="methods">
+            <div class="practices-heading"><div><p class="small-title">Modern farming methods</p><h2>Tools and techniques that support good decisions.</h2></div><p>Methods should fit your crop, soil, water access, climate, and budget. Start by learning what works locally.</p></div>
+            <div class="method-grid">
+                <article class="method-card"><span aria-hidden="true">滴</span><h3>Drip irrigation</h3><p>Delivers water near plant roots through a network of lines and emitters. System design and maintenance matter.</p></article>
+                <article class="method-card"><span aria-hidden="true">▤</span><h3>Soil testing</h3><p>Use a soil test and local advice to understand nutrient levels before choosing amendments or fertilizer.</p></article>
+                <article class="method-card"><span aria-hidden="true">⌁</span><h3>Protected cultivation</h3><p>Structures such as shade nets or greenhouses can help manage growing conditions for selected crops.</p></article>
+                <article class="method-card"><span aria-hidden="true">◷</span><h3>Field records</h3><p>Track planting dates, weather, irrigation, and observations to compare seasons and learn from results.</p></article>
+            </div>
+        </section>
+
+        <section class="tools section" id="tools">
+            <div class="tools-heading"><div><p class="small-title">Simple digital tools</p><h2>Plan with the information you have.</h2></div><p>These examples help organize information. They do not replace local forecasts, soil tests, or expert recommendations.</p></div>
+            <div class="tool-grid">
+                <article class="tool-card fertilizer-tool"><p class="tool-kicker">FERTILIZER CALCULATOR</p><h3>Calculate product quantity</h3><p>Enter the nutrient recommendation from your soil test or local adviser, plus the nutrient percentage shown on the product label.</p>
+                    <form id="fertilizerForm" class="fertilizer-form">
+                        <label for="nutrientRate">Recommended nutrient amount per acre (kg)</label><input id="nutrientRate" type="number" min="0.01" step="any" placeholder="e.g. 20" required>
+                        <label for="nutrientPercent">Nutrient percentage on product label (%)</label><input id="nutrientPercent" type="number" min="0.01" max="100" step="any" placeholder="e.g. 46" required>
+                        <label for="fieldArea">Field area (acres)</label><input id="fieldArea" type="number" min="0.01" step="any" placeholder="e.g. 2" required>
+                        <button class="button" type="submit">Calculate quantity</button>
+                    </form>
+                    <p id="fertilizerResult" class="tool-result" role="status" aria-live="polite">Enter values to calculate an estimate.</p>
+                    <p class="tool-caution">This only does the arithmetic. It does not recommend how much fertilizer your crop needs.</p>
+                </article>
+                <article class="tool-card weather-tool"><p class="tool-kicker">SAMPLE WEATHER PANEL</p><h3>Know what to check locally.</h3><p class="weather-demo-label">Example layout · not live forecast data</p><div class="weather-sample"><div><span>DAY TEMPERATURE</span><strong>28°–32°C</strong></div><div><span>RAIN CHANCE</span><strong>Check local forecast</strong></div><div><span>WIND</span><strong>Check before spraying</strong></div></div><p class="tool-caution">Use a trusted local weather service for current conditions before field work or irrigation decisions.</p></article>
+            </div>
+        </section>
+
+        <section class="field-guide section" id="field-guide">
+            <div class="field-guide-heading"><div><p class="small-title">A simple field guide</p><h2>Small checks. Better choices.</h2></div><p>Use these prompts on your next walk through the field. Your own observations are a useful place to start.</p></div>
+            <div class="guide-grid">
+                <article class="guide-item"><span class="guide-icon" aria-hidden="true">01</span><div><h3>Look at the leaves</h3><p>Notice changes in color, shape, or growth, and compare areas across the field.</p></div></article>
+                <article class="guide-item"><span class="guide-icon" aria-hidden="true">02</span><div><h3>Feel the soil</h3><p>Check a few spots at root depth to understand how damp or dry the soil is.</p></div></article>
+                <article class="guide-item"><span class="guide-icon" aria-hidden="true">03</span><div><h3>Keep a short note</h3><p>Record the date, weather, and anything you observed so patterns are easier to spot.</p></div></article>
+            </div>
+        </section>
+
+        <section class="field-notes section" id="field-notes">
+            <div class="notes-heading"><div><p class="small-title">Your next field walk</p><h2>A simple checklist to take along.</h2></div><p>Check what you observed, add a note, and it will stay saved in this browser on this device.</p></div>
+            <div class="field-notes-panel">
+                <div class="checklist" aria-label="Field walk checklist">
+                    <label><input type="checkbox" data-field-check="leaves"><span>Look for changes in leaves or new growth</span></label>
+                    <label><input type="checkbox" data-field-check="soil"><span>Check soil moisture in a few places</span></label>
+                    <label><input type="checkbox" data-field-check="water"><span>Notice recent rain, irrigation, or runoff</span></label>
+                    <label><input type="checkbox" data-field-check="pests"><span>Look for signs of pests or damage</span></label>
+                </div>
+                <div class="field-note-entry"><label for="fieldNote">Field note</label><textarea id="fieldNote" rows="4" placeholder="Date, weather, crop, and anything you noticed…"></textarea><div class="field-note-actions"><button class="button" type="button" id="saveFieldNote">Save note</button><button class="clear-note" type="button" id="clearFieldNote">Clear</button><p class="field-note-status" id="fieldNoteStatus" role="status" aria-live="polite"></p></div></div>
+            </div>
+        </section>
+
+        <section class="practices section" id="guides">
+            <div class="practices-heading">
+                <div><p class="small-title">Put it into practice</p><h2>Healthy habits for the whole season.</h2></div>
+                <p>Small, repeatable steps help you understand your field and make more thoughtful choices over time.</p>
+            </div>
+            <div class="practice-grid">
+                <article class="practice-card practice-water"><span class="practice-kicker">WATER WISELY</span><h3>Water with purpose</h3><p>Check the soil before watering, pay attention to recent rain, and look for places where water runs off instead of soaking in.</p><a href="#videos">Watch an irrigation guide <span aria-hidden="true">↗</span></a></article>
+                <article class="practice-card practice-soil"><span class="practice-kicker">BUILD SOIL HEALTH</span><h3>Keep soil covered</h3><p>Where suitable for your crop and climate, plant cover or crop residues can help protect soil between growing periods.</p><a href="#videos">Explore soil-care videos <span aria-hidden="true">↗</span></a></article>
+                <article class="practice-card practice-rotation"><span class="practice-kicker">PLAN AHEAD</span><h3>Rotate your crops</h3><p>Alternating crop families across seasons can support a more varied field plan. Choose rotations that fit local conditions.</p><a href="#videos">Learn about crop rotation <span aria-hidden="true">↗</span></a></article>
+            </div>
+            <p class="practice-note">Growing conditions vary by crop and location. Use local agricultural guidance when making field decisions.</p>
+        </section>
+
+        <section class="videos section" id="videos">
+            <div class="videos-heading"><div><p class="small-title">Watch and learn</p><h2>Useful videos for your next field walk.</h2></div><p>Short, practical lessons from agriculture educators to help you explore soil, irrigation, and crop planning.</p></div>
+            <div class="video-grid">
+                <article class="video-card"><iframe src="https://www.youtube-nocookie.com/embed/invUp0SX49g" title="Let's talk about soil — Food and Agriculture Organization of the United Nations" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="video-copy"><p class="video-topic">SOIL &amp; COMPOST</p><h3>Let’s talk about soil</h3><p>An animated introduction to soil resources and more sustainable soil management.</p><a href="https://www.youtube.com/watch?v=invUp0SX49g" target="_blank" rel="noopener noreferrer">Watch on YouTube · FAO <span aria-hidden="true">↗</span></a></div></article>
+                <article class="video-card"><iframe src="https://www.youtube-nocookie.com/embed/Wu2KJl-FgzM" title="Costs and benefits of irrigation in field crops — University of Delaware Cooperative Extension" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="video-copy"><p class="video-topic">WATER MANAGEMENT</p><h3>Costs and benefits of irrigation</h3><p>A university extension discussion of irrigation costs, management, and potential benefits.</p><a href="https://www.youtube.com/watch?v=Wu2KJl-FgzM" target="_blank" rel="noopener noreferrer">Watch on YouTube · UD Extension <span aria-hidden="true">↗</span></a></div></article>
+                <article class="video-card"><iframe src="https://www.youtube-nocookie.com/embed/imO6T3QX6Kc" title="Crop rotation planning — Washington Wheat Foundation" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="video-copy"><p class="video-topic">CROP PLANNING</p><h3>Why crop rotation matters</h3><p>A short introduction to planning crop rotations and considering the role they play on a farm.</p><a href="https://www.youtube.com/watch?v=imO6T3QX6Kc" target="_blank" rel="noopener noreferrer">Watch on YouTube · Washington Wheat Foundation <span aria-hidden="true">↗</span></a></div></article>
+            </div>
+            <p class="video-note">Videos are provided by their original publishers and play from YouTube.</p>
+        </section>
+
+        <section class="gallery section" id="gallery">
+            <div class="gallery-heading"><div><p class="small-title">From the field</p><h2>A closer look at growing.</h2></div><p>Explore a few scenes from farms and growing spaces.</p></div>
+            <div class="gallery-viewer">
+                <button class="gallery-arrow" id="galleryPrevious" type="button" aria-label="Previous photo">←</button>
+                <figure class="gallery-frame"><img id="galleryImage" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=85" alt="Green fields and crops under a wide sky" loading="lazy"><figcaption id="galleryCaption" aria-live="polite">Fields and growing seasons</figcaption></figure>
+                <button class="gallery-arrow" id="galleryNext" type="button" aria-label="Next photo">→</button>
+            </div>
+            <div class="gallery-dots" id="galleryDots" role="group" aria-label="Choose a field photo"></div>
+        </section>
+
+        <section class="tip section" id="tip">
+            <div>
+                <p class="small-title">A helpful reminder</p>
+                <h2>Every field is different.</h2>
+                <p>Start with what you can observe: the soil, the plants, and the weather.</p>
+                <p id="extraTip" class="extra-tip" aria-live="polite">A simple field note can help you compare conditions from one week to the next. Include the date, recent weather, and what you notice in the crop and soil.</p>
+                <button class="button" id="tipButton" type="button">Show another farming tip</button>
+            </div>
+            <img class="tip-picture" src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1000&q=85" alt="Rows of young green plants growing in a field" loading="lazy">
+        </section>
+
+        <section class="contact section" id="contact">
+            <p class="small-title">Keep learning</p>
+            <h2>Let’s talk about your farm.</h2>
+            <p>Have a question or an idea about the page? This sample form will show your message here on the page; it does not send email.</p>
+            <form class="contact-form" id="contactForm">
+                <label for="contactName">Your name</label>
+                <input id="contactName" name="name" type="text" placeholder="Your name" required>
+
+                <label for="contactEmail">Email address</label>
+                <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="contactMessage">Your message</label>
+                <textarea id="contactMessage" name="message" rows="4" placeholder="How can we help?" required></textarea>
+
+                <button class="button button-light" type="submit">Show message</button>
+                <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Green Field <span>·</span> Thoughtful growing for a changing world</p>
+        <a href="#home" class="back-to-top">Back to top ↑</a>
+    </footer>
+
+    <script src="farm.js"></script>
+</body>
+</html>
